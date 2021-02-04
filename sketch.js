@@ -17,7 +17,8 @@ function preload(){
   trex_running = loadAnimation("Trex/trex1.png","Trex/trex3.png","Trex/trex4.png");
   trex_collided = loadAnimation("Trex/trex_collided.png");
   //Cloud and Ground
-  getBackgroundImg();
+
+  
 groundImage = loadImage("Background/ground2.png");  
   cloudImage = loadImage("Background/cloud.png");
   //Obstacles
