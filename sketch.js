@@ -35,9 +35,9 @@ groundImage = loadImage("Background/ground2.png");
   dieSound = loadSound("Sound/die.mp3")
   checkPointSound = loadSound("Sound/checkPoint.mp3")
 // Background
-/*backgroundImg1=loadImage("Background/fd.jpg")
+backgroundImg1=loadImage("Background/fd.jpg")
 backgroundImg2=loadImage("Background/s.jpg")
-backgroundImg3=loadImage("Background/n.jpg")*/
+backgroundImg3=loadImage("Background/n.jpg")
 
 }
 
@@ -83,8 +83,8 @@ function setup() {
 
 function draw() {
   
-  if(backgroundImg)
-  background(backgroundImg);
+  
+  background(backgroundImg1);
   //displaying score
   fill(255,255,255)
   textSize(32)
@@ -227,20 +227,3 @@ function spawnClouds() {
   }
 }
 
-async function getBackgroundImg(){
-  var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
-  var responseJSON = await response.json();
-
-  var datetime = responseJSON.datetime;
-  var hour = datetime.slice(11,13);
-  
-  if(hour>=0600 && hour<=1900){
-      bg = "Background/n.jpg";
-  }
-  else{
-      bg = "Background/fd.jpg";
-  }
-
-  backgroundImg = loadImage(bg);
-  console.log(backgroundImg);
-}
